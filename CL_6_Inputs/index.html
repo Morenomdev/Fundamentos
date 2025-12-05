@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas Inputs</title>
+</head>
+
+
+<body>
+
+    <form action="#" method="post">
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required placeholder="email@mail.com">
+        </div>
+
+        <div>
+            <label for="telefono">Telefono:</label>
+            <input type="tel" name="telefono" id="telefono" title="Ingresa 10 digitos" placeholder="1234567890" pattern="[0-9]{10}">
+        </div>
+
+        <div>
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" id="password" required minlength="8" placeholder="Minimo 8 caracteres ">
+        </div>
+
+        <div>
+            <label for="">Edad:</label>
+            <input type="number" name="edad" id="edad" min="18" max="70">
+        </div>
+
+        <div>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" min="2024-01-01" max="2024-12-31">
+        </div>
+
+        <div>
+            <label for="color">Color:</label>
+            <input type="color" name="color" id="color">
+        </div>
+
+        <fieldset>
+            <legend>Generos:</legend>
+            <input type="radio" name="genero" id="masculino" value="M">
+            <label for="masculino">Masculino</label>
+
+            <input type="radio" name="genero" id="femenino" value="F">
+            <label for="femenino">Femenino</label>
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Intereses:</legend>
+
+            <input type="checkbox" name="intereses" id="deportes" value="deportes">
+            <label for="deportes">Deportes</label>
+
+            <input type="checkbox" name="intereses" id="musica" value="musica">
+            <label for="musica">Musica</label>
+        </fieldset>
+
+        <div>
+            <label for="pais">Pais</label>
+            <select name="pais" id="pais">
+                <option value="Mexico">Mexico</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Argentina">Argentina</option>
+            </select>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+
+    </form>
+    
+</body>
+
+</html>
