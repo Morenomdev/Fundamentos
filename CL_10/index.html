@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Accesibilidad</title>
 </head>
 <body>
-    
+
+    <button aria-label="Cerrar ventana">X</button>
+
+    <header>
+        <nav aria-label="Menu principal">
+            <a href="#Inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+        </nav>
+    </header>
+
+    <input type="search" name="" id="" aria-label="Buscador de productos"/>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" name="password" id="password" aria-describedby="password-help">
+    <small id="password-help">Minimo 8 caracteres</small>
+
+    <img src="grafico.jpg" alt="Ventas 2024" aria-describedby="grafica-descripcion">
+    <p id="grafica-descripcion">Las ventas aumentaron un 30% en el Q1</p>
+
+
+    <div role="main">       
+        <h2>Cotenido principal de la seccion</h2>
+        <p>Aqui va el contenido mas importante de la seccion</p>
+    </div>
+    <div role="alert">
+        <p>Tu sesion expirara en 5 minutos</p>
+    </div>
 </body>
 </html>
