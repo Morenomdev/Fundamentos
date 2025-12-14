@@ -1,0 +1,231 @@
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif}
+
+.header__name {
+  font-size: 40px;
+  margin-bottom: 2px;
+}
+.header__tagline {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  color: gray;
+}
+
+/*----- hero -------*/
+.hero {
+  background-color: #f0f6ff;
+  padding: 10px;
+  margin: 20px;
+  position: relative;
+}
+.hero__title {
+  font-size: 45px;
+}
+
+.hero__subtitle {
+  margin: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #0086ff;
+}
+
+.hero__description {
+  font-size: 18px;
+  padding: 1% 10%;
+}
+
+.hero__actions {
+  padding: 2% 10px;
+}
+
+
+/*---------navbar-------- */
+
+.nav__link:link {
+  color: gray;
+}
+
+.nav__link:visited {
+  color: gray;
+}
+
+.nav__link:hover {
+  color: #0086ff;
+}
+
+.nav__link--active {
+  color: #0086ff !important;
+}
+
+.nav__link{
+  text-decoration: none;
+
+}
+.nav__item {
+  font-size: 15px;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 2%;
+  display: inline-block;
+
+}
+
+.nav__list {
+  padding: 0px;
+}
+
+.button--primary {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #0086ff;
+  color: white;
+  text-decoration: none;
+}
+
+.button--secondary {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background-color: white;
+  padding: 12px;
+  margin-left: 15px;
+  border: 3px solid #0086ff;
+  font-weight: bold;
+  color: #0086ff;
+}
+
+.stat__number {
+  position: relative;
+  padding: 10px;
+}
+
+.stat__label {
+  position: relative;
+
+  padding: 30px;
+}
+
+
+/* --------- about --------- */
+.about {
+  margin: 10%;
+}
+.about__title {
+  font-size: 30px;
+}
+.about__intro {
+  font-size: 20px;
+}
+
+.about__text {
+  color: gray;
+  font-size: 16px;
+  margin: 40px;
+}
+
+
+/* ---------values---------- */
+
+.values {
+  padding: 0;
+  border: 20px solid white;
+}
+.values__title {
+  font-size: 30px;
+}
+.values__list {
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+.values__item {
+  background-color: #f0f6ff;
+  text-align: left;
+  margin: 20px;
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+.values__item:hover {
+  border: 1px solid #0086ff;
+}
+
+
+/* -----------Projects------- */
+.projects {
+  background-color:#f0f6ff;
+  padding: 20px;
+}
+.project {
+  background-color: white;
+  padding: 20px;
+  border: 3px solid #EDEEF0;
+  margin: 20px;
+  position: relative;
+  text-align: left;
+}
+.project:hover {
+  border: 3px solid #0086ff;
+}
+.projects__title {
+  font-size: 30px;
+}
+.projects__description {
+  font-size: 16px;
+  text-align: center;
+  color: gray;
+  margin: 30px 20%;
+}
+
+.project__description {
+  color: gray;
+}
+
+.project__title {
+  font-size: 25px;
+  margin-top: 40px;
+}
+
+.project__subtitle {
+  margin-bottom: 5px;
+}
+
+.project__learnings {
+  text-align: left;
+  margin: 0px 0px 30px;
+  color: gray;
+}
+
+.tag {
+
+  font-weight: bold;
+  color: #2E6C7B;
+  padding: 5px;
+  background-color: #DBFCFF;
+}
+
+.project__links {
+  padding: 20px;
+}
+
+.project__link {
+  text-decoration: none;
+  color: #0086ff;
+  font-weight: bold;
+  margin: 15px 5px;
+}
+
+.project__link:hover {
+  color: gray;
+}
+
+.project__badge {
+  color: white;
+  background-color:#0086ff;
+  padding: 5px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
