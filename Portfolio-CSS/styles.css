@@ -1,7 +1,22 @@
 body {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif}
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  height: 100%;
+}
 
+* {
+  box-sizing: border-box;
+}
+/* -------header-------- */
+.header{
+  overflow-y: auto ;
+  
+}
+
+.header__container {
+  position: sticky;
+}
 .header__name {
   font-size: 40px;
   margin-bottom: 2px;
@@ -16,10 +31,10 @@ body {
 /*----- hero -------*/
 .hero {
   background-color: #f0f6ff;
-  padding: 10px;
+  padding: 1px 0 30px 0;
   margin: 20px;
-  position: relative;
 }
+
 .hero__title {
   font-size: 45px;
 }
@@ -35,21 +50,35 @@ body {
   font-size: 18px;
   padding: 1% 10%;
 }
-
 .hero__actions {
   padding: 2% 10px;
 }
 
+.hero__stats {
+  text-align: center;
+}
+
+.stat {
+  display: inline-block;
+}
+.stat__number {
+  color: #0086ff;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+}
+
+.stat__label {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  color: gray;
+  margin: 0 10px 0 10px;
+}
 
 /*---------navbar-------- */
-
-.nav__link:link {
-  color: gray;
-}
-
-.nav__link:visited {
-  color: gray;
-}
 
 .nav__link:hover {
   color: #0086ff;
@@ -61,6 +90,7 @@ body {
 
 .nav__link{
   text-decoration: none;
+  color: gray;
 
 }
 .nav__item {
@@ -96,16 +126,7 @@ body {
   color: #0086ff;
 }
 
-.stat__number {
-  position: relative;
-  padding: 10px;
-}
 
-.stat__label {
-  position: relative;
-
-  padding: 30px;
-}
 
 
 /* --------- about --------- */
@@ -204,10 +225,11 @@ body {
   color: #2E6C7B;
   padding: 5px;
   background-color: #DBFCFF;
+  margin-right: 5px;
 }
 
 .project__links {
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .project__link {
@@ -228,4 +250,76 @@ body {
   position: absolute;
   top: 15px;
   left: 15px;
+}
+
+/* ---------------skills----------- */
+.skills__subtitle {
+  color: gray;
+}
+
+.skills__list {
+  display: block;
+}
+
+
+/* --------contact---------- */
+.contact {
+  background-color: #f0f6ff;
+  padding: 30px;
+  margin: 20px;
+  text-align: center;
+}
+
+.contact__description {
+  color: gray;
+}
+
+.contact__methods {
+  margin-bottom: 40px;
+  justify-content: space-between;
+  
+}
+
+.contact__method {
+  display: inline-block;
+  margin: 0px 20px 20px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.contact__link {
+  text-decoration: none;
+  color: #0086ff;
+  font-weight: bold;
+}
+
+
+
+/* ----------footer------------ */
+
+footer {
+  background-color: #181A1A;
+  width: 100%;
+  color: gray;
+}
+
+.footer__nav {
+  padding-top: 5%;
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+.footer__link:hover{
+  color: #0086ff;
+}
+
+.footer__copyright {
+  margin-bottom: 0;
+}
+.footer__credits {
+  padding: 0px 0px 40px;
+  margin: 0;
 }
