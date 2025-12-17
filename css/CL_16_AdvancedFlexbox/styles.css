@@ -1,0 +1,41 @@
+
+.container {
+    display: flex;
+    background: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20 px;
+    min-height: 100px;
+}
+
+.item {
+    padding: 20px;
+    background: #3489db;
+    color: white;
+    margin: 5px;
+    text-align: center;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.tall {
+
+}
+
+.self-start {
+    align-self: flex-start;
+}
+
+.self-end {
+    align-self: flex-end;
+}
+
