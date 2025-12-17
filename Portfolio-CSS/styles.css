@@ -1,31 +1,179 @@
-body {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-  height: 100%;
-}
-
+/* ===========================================
+   1. RESET BÁSICO
+   =========================================== */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  /* Colores principales - Paleta más vibrante y clara */
+  --color-primary: #5b21b6; /* Púrpura vibrante */
+  --color-primary-dark: #4c1d95; /* Púrpura oscuro */
+  --color-primary-darker: #3b0764; /* Púrpura muy oscuro */
+  --color-primary-light: #8b5cf6; /* Púrpura claro */
+  --color-primary-lighter: #a78bfa; /* Púrpura muy claro */
+
+  /* Colores secundarios */
+  --color-secondary: #06b6d4; /* Cyan vibrante */
+  --color-secondary-dark: #0891b2; /* Cyan oscuro */
+  --color-secondary-light: #22d3ee; /* Cyan claro */
+
+  /* Colores neutros - Más claros para mejor contraste */
+  --color-dark: #1f2937; /* Gris muy oscuro (no negro puro) */
+  --color-gray-dark: #374151; /* Gris oscuro */
+  --color-gray: #6b7280; /* Gris medio */
+  --color-gray-light: #9ca3af; /* Gris claro */
+  --color-gray-lighter: #e5e7eb; /* Gris muy claro */
+  --color-light: #f9fafb; /* Casi blanco */
+  --color-lighter: #fef3c7; /* Crema muy claro */
+  --color-white: #ffffff; /* Blanco puro */
+
+  /* Colores de acento */
+  --color-accent: #f59e0b; /* Naranja dorado */
+  --color-accent-light: #fbbf24;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Degradados - Más vibrantes y luminosos */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #8b5cf6 0%,
+    #06b6d4 100%
+  ); /* Púrpura a cyan */
+  --gradient-hero: linear-gradient(
+    135deg,
+    #a78bfa 0%,
+    #5b21b6 50%,
+    #06b6d4 100%
+  ); /* Degradado tricolor */
+  --gradient-accent: linear-gradient(
+    135deg,
+    #fbbf24 0%,
+    #f59e0b 100%
+  ); /* Dorado */
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  /* MEJORADO: Mejor line-height para legibilidad */
+  line-height: 1.7;
+  color: #333333;
+  background-color: #ffffff;
+  /* NUEVO: Antialiasing para mejor renderizado */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* NUEVO: Ajuste de texto más legible */
+  text-rendering: optimizeLegibility;
+}
+
+/* ===========================================
+     2. TIPOGRAFÍA GENERAL - MEJORADA
+     =========================================== */
+h1,
+h2,
+h3,
+h4 {
+  /* MEJORADO: Fuente display para títulos */
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  /* NUEVO: Letter-spacing para títulos */
+  letter-spacing: -0.02em;
+}
+h1 {
+  /* MEJORADO: Escala tipográfica más clara */
+  font-size: 3rem; /* 48px */
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.25rem; /* 36px */
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px */
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  /* NUEVO: Límite de ancho para mejor legibilidad */
+  /* max-width: 70ch; */
+}
+
+strong {
+  font-weight: 600;
+  color: #000000;
+}
+
+em {
+  font-style: italic;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+a {
+  text-decoration: none;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
 /* -------header-------- */
-.header{
-  overflow-y: auto ;
-  
+.header {
+  overflow-y: auto;
 }
 
 .header__container {
   position: sticky;
 }
 .header__name {
-  font-size: 40px;
-  margin-bottom: 2px;
+  margin: 20px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.03em;
 }
 .header__tagline {
-  margin-top: 2px;
-  font-size: 12px;
-  font-weight: bold;
-  color: gray;
+  margin: 0px 0 0 20px;
+  color: #666666;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /*----- hero -------*/
@@ -37,6 +185,7 @@ body {
 
 .hero__title {
   font-size: 45px;
+  text-align: center;
 }
 
 .hero__subtitle {
@@ -44,13 +193,17 @@ body {
   font-size: 22px;
   font-weight: bold;
   color: #0086ff;
+  text-align: center;
 }
 
 .hero__description {
   font-size: 18px;
   padding: 1% 10%;
+  text-align: center;
+
 }
 .hero__actions {
+  text-align: center;
   padding: 2% 10px;
 }
 
@@ -61,7 +214,9 @@ body {
 .stat {
   display: inline-block;
 }
+
 .stat__number {
+  font-family: "Lexend";
   color: #0086ff;
   padding: 10px;
   margin-top: 20px;
@@ -88,10 +243,9 @@ body {
   color: #0086ff !important;
 }
 
-.nav__link{
+.nav__link {
   text-decoration: none;
   color: gray;
-
 }
 .nav__item {
   font-size: 15px;
@@ -99,11 +253,25 @@ body {
   list-style-type: none;
   padding: 2%;
   display: inline-block;
-
 }
 
 .nav__list {
   padding: 0px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  /* NUEVO: Mejor tipografía en botones */
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.02em;
 }
 
 .button--primary {
@@ -126,9 +294,6 @@ body {
   color: #0086ff;
 }
 
-
-
-
 /* --------- about --------- */
 .about {
   margin: 10%;
@@ -145,7 +310,6 @@ body {
   font-size: 16px;
   margin: 40px;
 }
-
 
 /* ---------values---------- */
 
@@ -173,16 +337,17 @@ body {
   border: 1px solid #0086ff;
 }
 
-
 /* -----------Projects------- */
 .projects {
-  background-color:#f0f6ff;
+  text-align: center;
+  background-color: #f0f6ff;
   padding: 20px;
+  background: linear-gradient(135deg, #f9fafb 0%, #ede9fe 100%);
 }
 .project {
   background-color: white;
   padding: 20px;
-  border: 3px solid #EDEEF0;
+  border: 3px solid #edeef0;
   margin: 20px;
   position: relative;
   text-align: left;
@@ -215,17 +380,20 @@ body {
 
 .project__learnings {
   text-align: left;
-  margin: 0px 0px 30px;
+  margin: 0px 0px 30px 25px;
   color: gray;
 }
 
 .tag {
-
-  font-weight: bold;
-  color: #2E6C7B;
-  padding: 5px;
-  background-color: #DBFCFF;
-  margin-right: 5px;
+  display: inline-block;
+  background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+  color: var(--color-primary-dark);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  padding: 0.25rem 0.75rem;
+  letter-spacing: 0.025em;
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 .project__links {
@@ -233,19 +401,15 @@ body {
 }
 
 .project__link {
-  text-decoration: none;
-  color: #0086ff;
-  font-weight: bold;
-  margin: 15px 5px;
-}
-
-.project__link:hover {
-  color: gray;
+  display: inline-block;
+  margin-right: 1rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
 }
 
 .project__badge {
   color: white;
-  background-color:#0086ff;
+  background-color: #0086ff;
   padding: 5px;
   position: absolute;
   top: 15px;
@@ -253,6 +417,10 @@ body {
 }
 
 /* ---------------skills----------- */
+.skills {
+  text-align: center;
+}
+
 .skills__subtitle {
   color: gray;
 }
@@ -260,7 +428,6 @@ body {
 .skills__list {
   display: block;
 }
-
 
 /* --------contact---------- */
 .contact {
@@ -272,12 +439,12 @@ body {
 
 .contact__description {
   color: gray;
+  text-align: center;
 }
 
 .contact__methods {
   margin-bottom: 40px;
   justify-content: space-between;
-  
 }
 
 .contact__method {
@@ -293,14 +460,13 @@ body {
   font-weight: bold;
 }
 
-
-
 /* ----------footer------------ */
 
 footer {
-  background-color: #181A1A;
+  background-color: #181a1a;
   width: 100%;
   color: gray;
+  text-align: center;
 }
 
 .footer__nav {
@@ -312,11 +478,12 @@ footer {
   text-decoration: none;
   padding: 20px;
 }
-.footer__link:hover{
+.footer__link:hover {
   color: #0086ff;
 }
 
 .footer__copyright {
+  margin-top: 20px;
   margin-bottom: 0;
 }
 .footer__credits {
