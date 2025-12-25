@@ -14,6 +14,8 @@
   --color-primary-darker: #3b0764; /* Púrpura muy oscuro */
   --color-primary-light: #8b5cf6; /* Púrpura claro */
   --color-primary-lighter: #a78bfa; /* Púrpura muy claro */
+  --color-primary-project: #f9fafb;
+  --color-secondary-project: #ede9fe;
 
   /* Colores secundarios */
   --color-secondary: #06b6d4; /* Cyan vibrante */
@@ -71,7 +73,6 @@
 body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: 16px;
-  /* MEJORADO: Mejor line-height para legibilidad */
   line-height: 1.7;
   color: #333333;
   background-color: #ffffff;
@@ -82,23 +83,44 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* BOTONES */
+.button {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.button:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
 /* ===========================================
-     2. TIPOGRAFÍA GENERAL - MEJORADA
+     TIPOGRAFÍA GENERAL
      =========================================== */
+
+.header__container,
+.hero__container,
+.about__container,
+.projects__container,
+.skills__container,
+.contact__container,
+.footer__container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 h1,
 h2,
 h3,
 h4 {
-  /* MEJORADO: Fuente display para títulos */
   font-family: "Lexend", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: #1a1a1a;
-  /* NUEVO: Letter-spacing para títulos */
   letter-spacing: -0.02em;
 }
 h1 {
-  /* MEJORADO: Escala tipográfica más clara */
   font-size: 3rem; /* 48px */
   margin-bottom: 1.5rem;
   font-weight: 900;
@@ -127,7 +149,6 @@ h4 {
 
 p {
   margin-bottom: 1.25rem;
-  /* NUEVO: Límite de ancho para mejor legibilidad */
   /* max-width: 70ch; */
 }
 
@@ -141,24 +162,38 @@ em {
 }
 
 a:hover {
-  text-decoration: underline;
   text-decoration-thickness: 2px;
 }
 
-a {
+/* a {
   text-decoration: none;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
-}
+} */
 
 /* -------header-------- */
 .header {
-  overflow-y: auto;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 24px 0;
+  box-shadow: var(--shadow-lg);
 }
 
 .header__container {
-  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+.header__brand {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
 .header__name {
   margin: 20px;
   color: #1a1a1a;
@@ -200,7 +235,6 @@ a {
   font-size: 18px;
   padding: 1% 10%;
   text-align: center;
-
 }
 .hero__actions {
   text-align: center;
@@ -244,18 +278,24 @@ a {
 }
 
 .nav__link {
+  display: inline-block;
+  white-space: nowrap;
   text-decoration: none;
   color: gray;
+  padding: 8px 12px;
+  text-align: left;
 }
 .nav__item {
+  text-decoration: none;
   font-size: 15px;
   font-weight: bold;
   list-style-type: none;
   padding: 2%;
-  display: inline-block;
 }
 
 .nav__list {
+  display: flex;
+  align-items: center;
   padding: 0px;
 }
 
@@ -269,7 +309,6 @@ a {
   border: 2px solid transparent;
   cursor: pointer;
   text-decoration: none;
-  /* NUEVO: Mejor tipografía en botones */
   font-family: "Inter", sans-serif;
   letter-spacing: 0.02em;
 }
@@ -296,6 +335,7 @@ a {
 
 /* --------- about --------- */
 .about {
+  text-align: center;
   margin: 10%;
 }
 .about__title {
@@ -318,26 +358,49 @@ a {
   border: 20px solid white;
 }
 .values__title {
+  text-align: center;
   font-size: 30px;
 }
 .values__list {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: grid;
+  text-align: center;
   padding: 0;
   width: 100%;
   list-style-type: none;
 }
 .values__item {
-  background-color: #f0f6ff;
-  text-align: left;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 20px;
-  border: 1px solid gray;
+  border: 1px solid var(--color-gray-lighter);
   padding: 20px;
 }
 
 .values__item:hover {
-  border: 1px solid #0086ff;
+  border: 1px solid var(--color-primary-darker);
+  background: linear-gradient(
+    to right bottom,
+    var(--color-light),
+    var(--color-secondary-project)
+  );
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 /* -----------Projects------- */
+.project {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+.project:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
 .projects {
   text-align: center;
   background-color: #f0f6ff;
@@ -351,6 +414,7 @@ a {
   margin: 20px;
   position: relative;
   text-align: left;
+  border-radius: var(--radius-lg);
 }
 .project:hover {
   border: 3px solid #0086ff;
@@ -431,7 +495,8 @@ a {
 
 /* --------contact---------- */
 .contact {
-  background-color: #f0f6ff;
+  background: linear-gradient(135deg, #f9fafb 0%, #ede9fe 100%);
+
   padding: 30px;
   margin: 20px;
   text-align: center;
@@ -444,14 +509,24 @@ a {
 
 .contact__methods {
   margin-bottom: 40px;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .contact__method {
-  display: inline-block;
-  margin: 0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-light);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
   text-align: center;
-  box-sizing: border-box;
+}
+
+.contact__method:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
 }
 
 .contact__link {
